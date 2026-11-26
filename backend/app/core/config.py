@@ -11,7 +11,7 @@ class Settings(BaseSettings):
 
     app_name: str = "Raspberry Pi Docs Assistant API"
     vector_store_dir: Path = BACKEND_DIR / "data" / "vector_store"
-    ollama_base_url: str = "http://localhost:11434"
+    ollama_base_url: str = "http://127.0.0.1:11434"
     llm_model: str = "llama3.2"
     llm_temperature: float = 0.0
     llm_max_tokens: int = 300

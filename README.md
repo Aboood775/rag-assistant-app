@@ -200,7 +200,7 @@ The container reaches Ollama on the host through `http://host.docker.internal:11
 | Variable | Default | Description |
 |---|---|---|
 | `VECTOR_STORE_DIR` | `data/vector_store` | Folder exported by the notebook |
-| `OLLAMA_BASE_URL` | `http://localhost:11434` | Ollama server |
+| `OLLAMA_BASE_URL` | `http://127.0.0.1:11434` | Ollama server |
 | `LLM_MODEL` | `llama3.2` | Chat model used for answers |
 | `LLM_TEMPERATURE` | `0` | Sampling temperature |
 | `LLM_MAX_TOKENS` | `300` | Max tokens per answer |
@@ -218,7 +218,7 @@ always queries with the same embedding model that built the store.
 
 | Variable | Example | Description |
 |---|---|---|
-| `API_BASE_URL` | `http://localhost:8000` | Backend URL (required, never hard-coded) |
+| `API_BASE_URL` | `http://127.0.0.1:8000` | Backend URL (required, never hard-coded) |
 
 ## API reference
 
