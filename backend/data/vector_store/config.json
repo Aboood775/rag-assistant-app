@@ -1,0 +1,14 @@
+{
+  "collection_name": "raspberry_pi_docs",
+  "embedding_model": "nomic-embed-text",
+  "llm_model": "llama3.2",
+  "chunk_size": 800,
+  "chunk_overlap": 120,
+  "top_k": 4,
+  "fetch_k": 20,
+  "lambda_mult": 0.9,
+  "max_distance": 0.38,
+  "num_documents": 8,
+  "num_chunks": 75,
+  "created_at": "2026-11-26T16:32:25"
+}

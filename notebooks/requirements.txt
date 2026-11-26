@@ -1,0 +1,13 @@
+jupyter
+pandas
+numpy
+matplotlib
+requests==2.34.2
+pypdf==7.2.0
+pymupdf
+chromadb==1.5.9
+langchain-core==1.7.4
+langchain-community==0.4.2
+langchain-text-splitters==1.2.0
+langchain-ollama==1.2.0
+langchain-chroma==1.2.0
