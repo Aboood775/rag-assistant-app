@@ -14,7 +14,7 @@ def get_base_url() -> str:
     url = os.getenv("API_BASE_URL")
     if not url:
         raise ApiError("API_BASE_URL is not set. Copy .env.example to .env and set the backend URL.")
-    return url.rstrip("/")
+    return url.rstrip("/").replace("://localhost", "://127.0.0.1")
 
 
 def check_health() -> dict:

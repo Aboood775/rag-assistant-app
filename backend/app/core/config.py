@@ -23,6 +23,10 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
 
     @property
+    def ollama_url(self) -> str:
+        return self.ollama_base_url.rstrip("/").replace("://localhost", "://127.0.0.1")
+
+    @property
     def cors_origin_list(self) -> list[str]:
         return [origin.strip() for origin in self.cors_origins.split(",") if origin.strip()]
 

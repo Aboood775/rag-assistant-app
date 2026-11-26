@@ -20,7 +20,7 @@ async def lifespan(app: FastAPI):
     logger.info("Loading vector store from %s", settings.vector_store_dir)
     app.state.retriever = RetrievalService(
         vector_store_dir=settings.vector_store_dir,
-        ollama_base_url=settings.ollama_base_url,
+        ollama_base_url=settings.ollama_url,
         top_k=settings.top_k,
         fetch_k=settings.fetch_k,
         lambda_mult=settings.lambda_mult,
@@ -28,7 +28,7 @@ async def lifespan(app: FastAPI):
     )
     app.state.generator = GenerationService(
         model=settings.llm_model,
-        base_url=settings.ollama_base_url,
+        base_url=settings.ollama_url,
         temperature=settings.llm_temperature,
         max_tokens=settings.llm_max_tokens,
     )
