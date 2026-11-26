@@ -19,7 +19,7 @@ def get_base_url() -> str:
 
 def check_health() -> dict:
     try:
-        response = requests.get(f"{get_base_url()}/health", timeout=5)
+        response = requests.get(f"{get_base_url()}/health", timeout=20)
         response.raise_for_status()
         return response.json()
     except requests.RequestException as exc:
@@ -28,7 +28,7 @@ def check_health() -> dict:
 
 def ask_question(question: str) -> dict:
     try:
-        response = requests.post(f"{get_base_url()}/query", json={"question": question}, timeout=180)
+        response = requests.post(f"{get_base_url()}/query", json={"question": question}, timeout=300)
     except requests.Timeout as exc:
         raise ApiError("The request took too long. Please try again.") from exc
     except requests.RequestException as exc:
